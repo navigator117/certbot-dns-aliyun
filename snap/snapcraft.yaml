@@ -5,7 +5,7 @@ description: Aliyun DNS Authenticator plugin for Certbot
 confinement: strict
 
 grade: stable
-base: core22
+base: core24
 adopt-info: certbot-dns-aliyun
 
 parts:
