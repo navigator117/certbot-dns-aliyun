@@ -18,5 +18,5 @@ id: build
 - name: Upload artifact
 uses: actions/upload-artifact@v4
 with:
-name: certbot-dns-aliyun
+          name: certbot-dns-aliyun
           path: ${{ steps.build.outputs.snap }}
