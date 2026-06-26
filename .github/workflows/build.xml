@@ -1,0 +1,22 @@
+name: Build Snap
+
+on:
+push:
+branches: [master, main]
+workflow_dispatch:
+
+jobs:
+build:
+runs-on: ubuntu-22.04
+steps:
+- uses: actions/checkout@v4
+
+- name: Build snap
+uses: snapcore/action-build@v1
+id: build
+
+- name: Upload artifact
+uses: actions/upload-artifact@v4
+with:
+name: certbot-dns-aliyun
+          path: ${{ steps.build.outputs.snap }}
